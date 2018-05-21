@@ -10,7 +10,7 @@ export default class SearchBarTypeAhead extends Component {
       <Typeahead
         labelKey="name"
         options={options}
-        placeholder="What's are we going?"
+        placeholder="Where are we going?"
         inputProps={{className: ['border-0 ',classes.Input].join(' ')}}/>
     );
   } 
