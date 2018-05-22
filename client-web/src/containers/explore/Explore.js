@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import PropTypes from "prop-types";
 //
 import * as actions from "../../store/actions/index";
 //
@@ -17,4 +18,14 @@ const mapDispatchToProps = dispatch => {
     searchByCity: city => dispatch(actions.searchByCity(city))
   };
 };
-export default connect(null, mapDispatchToProps)(Explore);
+const mapStateToProps = state => {
+  return {
+    city: state.cityEvents.city,
+    events: state.cityEvents.events
+  };
+};
+Explore.propTypes = {
+  city: PropTypes.string.isRequired,
+  events: PropTypes.array.isRequired
+};
+export default connect(mapStateToProps, mapDispatchToProps)(Explore);

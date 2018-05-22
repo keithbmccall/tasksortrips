@@ -1,17 +1,18 @@
-import { WINDOW_RESIZE } from "../actions/actionTypes";
+import { SEARCH_BY_CITY } from "../actions/actionTypes";
 
 const initialState = {
-  windowWidth: 1
+  city: "",
+  events: []
 };
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case WINDOW_RESIZE:
+    case SEARCH_BY_CITY:
       return {
         ...state,
-        windowWidth: action.payload
+        city: action.payload.city,
+        events: action.payload.events
       };
-    
     default:
       return state;
   }

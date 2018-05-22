@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import PropTypes from "prop-types";
 //
 import CityPreviews from "../../components/previews/city/CityPreviews";
 import EventPreviews from "../../components/previews/event/EventPreviews";
@@ -33,8 +34,10 @@ class Landing extends Component {
 }
 const mapStateToProps = state => {
   return {
-    isSmallScreen: state.window.windowWidth
+    isSmallScreen: state.window.windowWidth < 700
   };
 };
-
+Landing.propTypes = {
+  isSmallScreen: PropTypes.bool.isRequired
+};
 export default connect(mapStateToProps)(Landing);

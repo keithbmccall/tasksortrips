@@ -24,7 +24,7 @@ class Layout extends Component {
   }
 }
 Layout.propTypes = {
-  // isSmallScreen: PropTypes.boolean
+  isSmallScreen: PropTypes.bool.isRequired
 };
 const mapStateToProps = state => {
   return {
