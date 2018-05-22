@@ -5,7 +5,7 @@ import classes from "./EventPreview.module.css";
 const EventPreviews = props => {
   const renderEventPromos = (event, key) => {
     return (
-      <div className={["col-sm-6", classes.PreviewHolder].join(" ")}>
+      <div className={["col-sm-6", classes.PreviewHolder].join(" ")} key={key}>
         <div
           className={["rounded", classes.EventSquare].join(" ")}
           style={{ background: `url(${event.pic})` }}

@@ -1,9 +1,8 @@
 import { WINDOW_RESIZE } from "./actionTypes";
 
-export const windowResize = () => dispatch => {
-    dispatch({
-        type: WINDOW_RESIZE,
-        payload: window.innerWidth
-    })
-
+export const windowResize = () => {
+  return {
+    type: WINDOW_RESIZE,
+    payload: window.innerWidth
+  };
 };

@@ -1,9 +1,10 @@
 import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
-import PropTypes from 'prop-types'
-import { windowResize } from "../../store/actions/windowActions";
+import PropTypes from "prop-types";
+import * as actions from "../../store/actions/index";
 //
 import NavBar from "../../components/navigation/navbar/NavBar";
+//
 
 class Layout extends Component {
   componentDidMount() {
@@ -22,14 +23,18 @@ class Layout extends Component {
     );
   }
 }
-Layout.propTypes={
-  isSmallScreen: PropTypes.boolean
-}
+Layout.propTypes = {
+  // isSmallScreen: PropTypes.boolean
+};
 const mapStateToProps = state => {
   return {
     isSmallScreen: state.window.windowWidth < 700
     // isLoggedIn: state.auth.token !== null
   };
 };
-
-export default connect(mapStateToProps, { windowResize })(Layout);
+const mapDispatchToProps = dispatch => {
+  return {
+    windowResize: () => dispatch(actions.windowResize())
+  };
+};
+export default connect(mapStateToProps, mapDispatchToProps)(Layout);

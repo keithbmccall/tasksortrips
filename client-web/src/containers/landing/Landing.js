@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { windowResize } from "../../store/actions/windowActions";
 //
 import CityPreviews from "../../components/previews/city/CityPreviews";
 import EventPreviews from "../../components/previews/event/EventPreviews";
 //
 import { CityData, EventData } from "../../data/LandingPageData";
+//
 class Landing extends Component {
   retrieveCityData = () => {
     this.setState({
@@ -31,5 +31,10 @@ class Landing extends Component {
     );
   }
 }
+const mapStateToProps = state => {
+  return {
+    isSmallScreen: state.window.windowWidth
+  };
+};
 
-export default connect(null, { windowResize })(Landing);
+export default connect(mapStateToProps)(Landing);
