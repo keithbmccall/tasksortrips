@@ -1,0 +1,26 @@
+.Container {
+}
+.CitySquare {
+  flex: 1;
+  height: 220px;
+  color: #ffffff;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  padding: 0;
+}
+
+.PreviewHolder {
+  padding: 0 5px 10px 5px;
+}
+
+.Overlay {
+  background: rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in;
+}
+.Overlay:hover {
+  background: rgba(0, 0, 0, 0);
+}
+h1 {
+  margin-bottom: 0;
+  letter-spacing: 1px;
+}
