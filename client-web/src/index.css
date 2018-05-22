@@ -3,8 +3,8 @@ body {
   padding: 0;
   font-size: 13px;
 }
-div .nav-link :link,
-div .nav-link :hover {
+div .nav-link:link,
+div .nav-link:hover {
   text-decoration: none;
 }
 .min-width-80 {
@@ -25,7 +25,9 @@ div .nav-link :hover {
   opacity: 0;
   width: 100vw;
 }
-
+a,a:hover{
+  text-decoration: none
+}
 .dropdown.show .dropdown-menu {
   max-height: 400px;
   opacity: 1;

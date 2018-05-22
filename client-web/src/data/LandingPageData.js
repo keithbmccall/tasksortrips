@@ -1,8 +1,8 @@
 import LA from "../assets/data/city-preview-images/la.jpg";
 import NY from "../assets/data/city-preview-images/nyc.jpg";
-import PARIS from '../assets/data/city-preview-images/paris.jpg'
-import RIO from '../assets/data/city-preview-images/rio.jpg'
-import TO from '../assets/data/city-preview-images/to.jpg'
+import PARIS from "../assets/data/city-preview-images/paris.jpg";
+import RIO from "../assets/data/city-preview-images/rio.jpg";
+import TO from "../assets/data/city-preview-images/to.jpg";
 
 const cityData = [
   {
