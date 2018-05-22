@@ -11,7 +11,8 @@ export default class SearchBarTypeAhead extends Component {
         labelKey="name"
         options={options}
         placeholder="Where are we going?"
-        inputProps={{className: ['border-0 ',classes.Input].join(' ')}}/>
+        inputProps={{ className: ["border-0 ", classes.Input].join(" ") }}
+      />
     );
-  } 
+  }
 }

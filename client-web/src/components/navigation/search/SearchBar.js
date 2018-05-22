@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./SearchBar.module.css";
 import FaSearch from "react-icons/lib/fa/search";
 //
-import SearchBarTypeAhead from './SearchBarTypeAhead'
+import SearchBarTypeAhead from "./SearchBarTypeAhead";
 
 const SearchBar = props => {
   const searchIcon = <FaSearch />;
@@ -18,7 +18,7 @@ const SearchBar = props => {
             {searchIcon}
           </span>
         </div>
-        <SearchBarTypeAhead/>
+        <SearchBarTypeAhead />
       </div>
     </div>
   );

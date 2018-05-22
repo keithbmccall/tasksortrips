@@ -3,7 +3,7 @@ import { Switch, Route } from "react-router-dom";
 //
 import Layout from "./hoc/layout/Layout";
 //
-import Landing from './containers/landing/Landing'
+import Landing from "./containers/landing/Landing";
 //
 class App extends Component {
   render() {
