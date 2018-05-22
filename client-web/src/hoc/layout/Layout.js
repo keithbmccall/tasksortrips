@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import * as actions from "../../store/actions/index";
+import classes from './Layout.module.css'
 //
 import NavBar from "../../components/navigation/navbar/NavBar";
 //
@@ -18,7 +19,7 @@ class Layout extends Component {
           isLoggedIn={this.props.isLoggedIn}
           isSmallScreen={this.props.isSmallScreen}
         />
-        {this.props.children}
+        <div className={classes.Container}>{this.props.children}</div>
       </Fragment>
     );
   }

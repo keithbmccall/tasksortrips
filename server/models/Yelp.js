@@ -6,7 +6,6 @@ const yelp = {};
 
 yelp.searchByCity = (req, res, next) => {
   const { city } = req.params;
-  console.log("runnnnn");
   //
   axios({
     url: `https://api.yelp.com/v3/events?location=${city}&radius=40000&limit=50`,

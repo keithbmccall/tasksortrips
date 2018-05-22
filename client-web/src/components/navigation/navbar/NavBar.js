@@ -2,8 +2,8 @@ import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 import classes from "./NavBar.module.css";
 //
-import NavItems from "../../navigation/navitems/NavItems";
-import SearchBar from "../../navigation/search/SearchBar";
+import NavItems from "./navitems/NavItems";
+import SearchBar from "./search/SearchBar";
 
 const NavBar = props => {
   const navBar = !props.isSmallScreen ? (
@@ -43,7 +43,7 @@ const NavBar = props => {
 
   return (
     <div
-      className={[classes.Container, "d-flex border-bottom w-100 pl-2"].join(
+      className={[classes.Container, "d-flex border-bottom w-100 pl-2 fixed-top"].join(
         " "
       )}
     >
