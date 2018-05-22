@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 import classes from "./NavBar.module.css";
 //
@@ -9,7 +9,7 @@ const NavBar = props => {
   const navBar = !props.isSmallScreen ? (
     <Fragment>
       <div className="d-flex align-items-center cursor nav-link  ">
-        <Link to="#" className="text-dark">
+        <Link to="/" className="text-dark">
           LOGO
         </Link>
       </div>

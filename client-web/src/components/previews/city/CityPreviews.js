@@ -1,5 +1,4 @@
 import React from "react";
-import classes from "./CityPreview.module.css";
 //
 import CityPreview from "./CityPreview";
 //
