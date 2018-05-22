@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 //
-import CityPreviews from "../../components/previews/city/CityPreviews";
-import EventPreviews from "../../components/previews/event/EventPreviews";
+import CityPreviews from "../../components/previews/cities/CityPreviews";
+import EventPreviews from "../../components/previews/events/EventPreviews";
 //
 import { CityData, EventData } from "../../data/LandingPageData";
 //
