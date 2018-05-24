@@ -9,7 +9,7 @@ const cors = require("cors");
 const port = process.env.PORT || 8080;
 const app = express();
 //controllers
-
+const usersRouter = require('./controllers/Users')
 const yelpRouter = require('./controllers/Yelp')
 // mongoose
 mongoose.Promise = global.Promise;
@@ -27,6 +27,7 @@ app.use(logger("dev"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use('/', yelpRouter)
+app.use('/users', usersRouter)
 
 app.listen(port, function() {
   console.log(`listening on port ${port}`);
