@@ -16,7 +16,6 @@ class Layout extends Component {
     return (
       <Fragment>
         <NavBar
-          isLoggedIn={this.props.isLoggedIn}
           isSmallScreen={this.props.isSmallScreen}
         />
         <div className={classes.Container}>{this.props.children}</div>

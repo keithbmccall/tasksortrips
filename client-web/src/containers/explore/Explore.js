@@ -10,7 +10,18 @@ class Explore extends Component {
     this.props.searchByCity(this.props.match.params.city);
   }
   render() {
-    return <div>explore after search after clicking throught cities</div>;
+    return <div className="container-fluid mt-4">
+    
+    <div>
+    <h4>{this.props.city.split('-').join(' ')} Events</h4>
+
+      <div></div>
+    </div>
+    
+    
+    
+    
+    </div>;
   }
 }
 const mapDispatchToProps = dispatch => {
@@ -19,6 +30,7 @@ const mapDispatchToProps = dispatch => {
   };
 };
 const mapStateToProps = state => {
+  console.log(state.cityEvents.events)
   return {
     city: state.cityEvents.city,
     events: state.cityEvents.events

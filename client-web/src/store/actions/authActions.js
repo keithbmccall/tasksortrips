@@ -1,16 +1,16 @@
 import axios from "axios";
 import { ATTEMPT_LOGIN, ATTEMPT_REGISTER } from "./actionTypes";
 
-export const attemptLogin = data => dispatch => {
+export const attemptRegister = data => dispatch => {
   axios({
     method: "post",
-    url: "https://jsonplaceholder.typicode.com/posts",
+    url: `http://localhost:8080/users/register`,
     body: data
   })
     .then(res => res.json())
     .then(auth =>
       dispatch({
-        type: ATTEMPT_LOGIN,
+        type: ATTEMPT_REGISTER,
         payload: auth
       })
     );
